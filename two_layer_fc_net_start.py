@@ -1,4 +1,4 @@
-1.入口
+#1.入口
 import matplotlib.pyplot as plt
 from fc_net import *
 from data_utils import get_CIFAR10_data
@@ -33,8 +33,8 @@ plt.show()
 best_model = model
 y_test_pred = np.argmax(best_model.loss(data['X_test']), axis=1)
 y_val_pred = np.argmax(best_model.loss(data['X_val']), axis=1)
-print 'Validation set accuracy: ', (y_val_pred == data['y_val']).mean()
-print 'Test set accuracy: ', (y_test_pred == data['y_test']).mean()
+print('Validation set accuracy: ', (y_val_pred == data['y_val']).mean())
+print('Test set accuracy: ', (y_test_pred == data['y_test']).mean())
 # Validation set accuracy:  about 52.9%
 # Test set accuracy:  about 54.7%
 
